@@ -377,7 +377,9 @@ function renderLogin(status = window.__status || {}) {
     }
   } },
   h('h2', {}, setup ? '第一次使用：设置登录密码' : '登录网站后台'),
-  setup ? h('p', { class: 'small muted' }, '至少 8 位，别和其他账号用同一个密码。设置后只能用这个密码登录。') : null,
+  setup
+    ? h('p', { class: 'small muted' }, '至少 8 位，别和其他账号用同一个密码。每台设备只需要登录一次，一年内不用再输。')
+    : h('p', { class: 'small muted' }, '登录后这台设备一年内不用再输密码。'),
   h('label', { class: 'field' }, '密码', input),
   setup ? h('label', { class: 'field' }, '再输一次', confirm) : null,
   err, btn);
