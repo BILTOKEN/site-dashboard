@@ -1,0 +1,14 @@
+{
+  "name": "site-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Private multi-site dashboard: Google Search Console, Bing, uptime and first-party page views.",
+  "scripts": {
+    "test": "node --test",
+    "dev": "MEMORY_STORE=1 MOCK_EXTERNAL=1 DASHBOARD_PASSWORD=dev CRON_SECRET=dev node scripts/dev.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
